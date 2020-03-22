@@ -26,6 +26,8 @@ public abstract class FastFood implements Eatable {
         System.out.println("쓰레기를 정리합니다.");
     }
 
+    abstract public boolean isDoublePatty();
+
     abstract public void drink();
 
     abstract public void empty();

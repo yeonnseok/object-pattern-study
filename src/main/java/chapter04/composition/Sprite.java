@@ -1,8 +1,8 @@
 package chapter04.composition;
 
 public class Sprite extends Beverage {
-    public Sprite(String name) {
-        super(name);
+    public Sprite(String name, int sugar) {
+        super(name, sugar);
     }
 
     @Override

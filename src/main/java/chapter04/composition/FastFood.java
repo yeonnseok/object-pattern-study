@@ -1,10 +1,16 @@
 package chapter04.composition;
 
 public class FastFood implements Eatable {
+    private Burger burger;
     private Beverage beverage;
 
-    public FastFood(Beverage beverage) {
+    public FastFood(Burger burger, Beverage beverage) {
+        this.burger = burger;
         this.beverage = beverage;
+    }
+
+    public void setBurger(Burger burger) {
+        this.burger = burger;
     }
 
     public void setBeverage(Beverage targetBeverage) {
@@ -12,7 +18,11 @@ public class FastFood implements Eatable {
     }
 
     public void printName() {
-        System.out.println(beverage.getName());
+        System.out.println(burger.getName() + "+" + beverage.getName());
+    }
+
+    public int getBeverageSugar() {
+        return beverage.getSugar();
     }
 
     @Override

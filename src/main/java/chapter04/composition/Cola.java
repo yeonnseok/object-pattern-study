@@ -1,8 +1,8 @@
 package chapter04.composition;
 
 public class Cola extends Beverage {
-    public Cola(String name) {
-        super(name);
+    public Cola(String name, int sugar) {
+        super(name, sugar);
     }
 
     @Override
