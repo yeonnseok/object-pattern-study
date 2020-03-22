@@ -18,8 +18,9 @@
 //    }
 //
 //    private OnClickListener menuListener = new OnClickListener() {
-//        public void clicked(Menu eventSource) {
-//            currentScreen = new eventSource.getId();
+//        public void clicked(Component eventSource) {
+//            ScreenUI screenUI = ScreenCreator.of(eventSource.getId());
+//            screenUI.show();
 //        }
 //    }
 //
