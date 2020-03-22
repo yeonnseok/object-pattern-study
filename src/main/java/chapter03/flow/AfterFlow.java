@@ -3,14 +3,14 @@ package chapter03.flow;
 import chapter03.light.LightRegulator;
 import chapter03.light.MockOfLEDLight;
 import chapter03.sound.SoundRegulator;
-import chapter03.sound.SoundControllerFactory;
+import chapter03.sound.SoundRegulatorFactory;
 
 public class AfterFlow {
     private SoundRegulator soundRegulator;
     private LightRegulator lightRegulator;
 
     public void run() {
-        soundRegulator = SoundControllerFactory.getInstance().create(); // 다른 타입의 생성을 추성화함.
+        soundRegulator = SoundRegulatorFactory.getInstance().create(); // 다른 타입의 생성을 추성화함.
         soundRegulator.volumeUp();
         soundRegulator.volumeDown();
         soundRegulator.mute();

@@ -2,7 +2,7 @@ package chapter03.sound;
 
 import java.util.Scanner;
 
-public class SoundControllerFactory {
+public class SoundRegulatorFactory {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public SoundRegulator create() {
@@ -17,13 +17,13 @@ public class SoundControllerFactory {
         return SCANNER.nextLine().equals("yes");
     }
 
-    private static SoundControllerFactory instance;
-    public static SoundControllerFactory getInstance() {
+    private static SoundRegulatorFactory instance;
+    public static SoundRegulatorFactory getInstance() {
         if (instance == null) {
-            return new SoundControllerFactory();
+            return new SoundRegulatorFactory();
         }
         return null;
     }
 
-    private SoundControllerFactory() {};
+    private SoundRegulatorFactory() {};
 }
