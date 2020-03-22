@@ -1,6 +1,6 @@
 package chapter03.sound;
 
-public class BluetoothSpeaker extends SoundController implements Bluetooth{
+public class BluetoothSpeaker extends SoundRegulator implements Bluetooth{
     @Override
     public void volumeUp() {
         System.out.println("볼륨이 1 증가했습니다.");

@@ -1,6 +1,6 @@
 package chapter03.light;
 
-public class MockOfLEDLight implements LightController{
+public class MockOfLEDLight implements LightRegulator {
 
     @Override
     public void lightOn() {

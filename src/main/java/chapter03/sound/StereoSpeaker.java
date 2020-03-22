@@ -1,6 +1,6 @@
 package chapter03.sound;
 
-public class StereoSpeaker extends SoundController {
+public class StereoSpeaker extends SoundRegulator {
     @Override
     public void volumeUp() {
         System.out.println("볼륨이 2 증가했습니다.");

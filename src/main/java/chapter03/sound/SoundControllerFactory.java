@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SoundControllerFactory {
     private static final Scanner SCANNER = new Scanner(System.in);
 
-    public SoundController create() {
+    public SoundRegulator create() {
         if (pairable()) {
             return new BluetoothSpeaker();
         } else {

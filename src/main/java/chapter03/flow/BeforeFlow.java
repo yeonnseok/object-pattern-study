@@ -1,8 +1,8 @@
 package chapter03.flow;
 
 import chapter03.sound.BluetoothSpeaker;
-import chapter03.light.LightController;
-import chapter03.sound.SoundController;
+import chapter03.light.LightRegulator;
+import chapter03.sound.SoundRegulator;
 import chapter03.sound.StereoSpeaker;
 
 import java.util.Scanner;
@@ -10,18 +10,18 @@ import java.util.Scanner;
 public class BeforeFlow {
     private static final Scanner SCANNER = new Scanner(System.in);
 
-    private SoundController soundController;
-    private LightController lightController;
+    private SoundRegulator soundRegulator;
+    private LightRegulator lightRegulator;
 
     public void run() {
         if (pairable()) {
-            soundController = new BluetoothSpeaker();
+            soundRegulator = new BluetoothSpeaker();
         } else {
-            soundController = new StereoSpeaker();
+            soundRegulator = new StereoSpeaker();
         }
-        soundController.volumeUp();
-        soundController.volumeDown();
-        soundController.mute();
+        soundRegulator.volumeUp();
+        soundRegulator.volumeDown();
+        soundRegulator.mute();
     }
 
     private boolean pairable() {
